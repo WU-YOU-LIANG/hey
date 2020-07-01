@@ -5,9 +5,11 @@ while i >= 0:
 	if pwd == password:
 		print('登入成功')
 		break
-	elif i == 0:
-		print('登入失敗')
-		break
 	else:
-	    print('你還有', i ,'次機會')
-	    i = i - 1
+	    if i > 0:
+	    	print('密碼錯誤.你還有', i ,'次機會')
+	    	i = i - 1
+	    else:
+	    	print('密碼錯誤.沒機會了可憐哪')
+	    	break
+	    
